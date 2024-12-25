@@ -65,19 +65,21 @@ vocabulary=list(set(vocabulary))
 
 
 Where:
-- **N_wi|Spam**    : The number of times the word wi appears in spam messages.
-- **N_Spam**     : The total number of words in spam messages.
-- **α**         : Smoothing parameter (Laplace smoothing).
-- **N_Vocabulary** : The total number of unique words in the vocabulary.
-- **P(Spam | w1, w2, ..., wn)** : Probability that the message is spam given the words.
-- **P(Spam)**  : Prior probability of spam.
-- **P(wi | Spam)** : Probability of each word wi occurring in spam messages.
-- **Π**   : Product over all words in the message.
 
+- **```P(Spam | w1, w2, ..., wn)```** : Probability that the message is spam given the words.
+- **```P(Spam)```**  : Prior probability of spam.
+- **```P(wi | Spam)```** : Probability of each word wi occurring in spam messages.
+-  **```P(Ham | w1, w2, ..., wn)```** : Probability that the message is non-spam given the words.
+- **```P(Ham)```**  : Prior probability of non- spam.
+- **```P(wi | Ham)```** : Probability of each word wi occurring in non-spam messages.
+- **```Π```**   : Product over all words in the message.
+- **```N_wi|Spam```**    : The number of times the word wi appears in spam messages.
+- **```N_Spam```**     : The total number of words in spam messages.
+ - **```N_wi|Ham```**    : The number of times the word wi appears in non-spam messages.
+- **```N_Ham```**     : The total number of words in non-spam messages.
+- **```α```**         : Smoothing parameter (Laplace smoothing).
+- **```N_Vocabulary```** : The total number of unique words in the vocabulary.
 
-**The Cauchy-Schwarz Inequality**\
-```math
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)```
 
 
 
