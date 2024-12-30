@@ -58,10 +58,10 @@ vocabulary=list(set(vocabulary))
     **```P(Ham|w1,w2,...,wn) ∝ P(Ham)⋅ n∏i=1 P(wi|Ham)```**
 4. The probability of a word wi given that the message is spam can be calculated as:
 
-     **```P(wi|Spam)= (N_wi|Spam) + α/(N_Spam+α⋅N_Vocabulary)```**
+     **```P(wi|Spam)= {(N_wi|Spam) + α} /(N_Spam+α⋅N_Vocabulary)```**
 5.  The probability of a word wi given that the message is non-spam can be calculated as:
 
-     **```P(wi|Ham)=(N_wi|Ham) + α/(N_Ham+α⋅N_Vocabulary)```**
+     **```P(wi|Ham)={(N_wi|Ham) + α} /(N_Ham+α⋅N_Vocabulary)```**
 
 
 Where:
