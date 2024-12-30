@@ -107,7 +107,7 @@ print('Accuracy:', correct/total)
 
 ## Conclusion 
 
-An accuracy of 92% suggests that the Naive bayes Classifier is reliable for spam detection in a given dataset of text messages. While this value is strong , there is still small margin for error. Misclassified messages could lead to missed spam detection or user expperience. From the further analysis of misclasified messages, it can be assumed that it was due to inclusion of many new words out of the vocabulary or not having the complete message displayed in the SMS.Naive Bayes theorem assumes words in the message are independent, which might not always true and could cause misclassification of words. Further evaluation could be done using metrics such as precision, recall and F1-score to asses how well the model balances between identifying spam and avoiding misclassification.
+An accuracy of 98% suggests that the Naive bayes Classifier is reliable for spam detection in a given dataset of text messages. While this value is strong , there is still small margin for error. Misclassified messages could lead to missed spam detection or user expperience. From the further analysis of misclasified messages, it can be assumed that it was due to inclusion of many new words out of the vocabulary or not having the complete message displayed in the SMS.Naive Bayes theorem assumes words in the message are independent, which might not always true and could cause misclassification of words. Further evaluation could be done using metrics such as precision, recall and F1-score to asses how well the model balances between identifying spam and avoiding misclassification.
 
 
 
