@@ -80,6 +80,47 @@ Where:
 - **```α```**         : Smoothing parameter (Laplace smoothing).
 - **```N_Vocabulary```** : The total number of unique words in the vocabulary.
 
+- Laplace Smoothing (**α**=1) was used to avoid zero probabilities of the words that may not appear in the spam or non-spam messages.
+
+1. All above parameters are calculated as shown in the [Notebook](Notebook/vidisha_Using+Naive+Bayes+to+build+a+spam+filter.ipynb)
+2. By using above parameters, both probabilities of the new message being spam message or a non-spam message was calculated.
+3. Depending on highest proabability out of them, the new message was classified as a spam or non-spam message.
+
+## Determing the accuracy of the predicted labels 
+
+The accuracy of the predicted labels can be calculated by comparing the original label of the messages in the test  dataset to the predicted label. 
+The following code can be used to calculate the accuracy of the prediction: 
+Furthermore the SMS message of incorrectly predicted labels can be collected into a list and analyze the each  word of it to understand what most probably caused them to get classified incorrectly.
+
+```python
+test_set['predicted'] = test_set['SMS'].apply(classify_test_set) # classify_test_set function is defined in the Notebook
+total=test_set.shape[0]
+
+for row in test_set.iterrows():
+    row=iterrows[1]
+    if row['Label']==row['predicted']:
+         correct=+1
+print('Correct:', correct)
+print('Incorrect:', total - correct)
+print('Accuracy:', correct/total)
+```
+
+## Conclusion 
+
+An accuracy of 92% suggests that the Naive bayes Classifier is reliable for spam detection in a given dataset of text messages. While this value is strong , there is still small margin for error. Misclassified messages could lead to missed spam detection or user expperience. From the further analysis of misclasified messages, it can be assumed that it was due to inclusion of many new words out of the vocabulary or not having the complete message displayed in the SMS.Naive Bayes theorem assumes words in the message are independent, which might not always true and could cause misclassification of words. Further evaluation could be done using metrics such as precision, recall and F1-score to asses how well the model balances between identifying spam and avoiding misclassification.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
